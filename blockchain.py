@@ -1,3 +1,8 @@
+import hashlib
+import json
+from time import time
+
+
 class Blockchain(object):
     def __init__(self):
         self.chain = []
@@ -30,7 +35,16 @@ class Blockchain(object):
 
     @staticmethod
     def hash(block):
-        # Hashes a Block
-        pass
+        """
+        Creates a SHA-256 hash of a Block
+
+        :param block: <dict> Block
+        :return: <str>
+        """
+
+        # Must make sure that Dictionary is Ordered
+        # Otherwise we'll have inconsistent hashes
+        block_string = json.dumps(block, sort_keys=True).encode()
+        return hashlib.sha256(block_string).hexdigest()
 
 
