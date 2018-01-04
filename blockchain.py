@@ -8,6 +8,10 @@ class Blockchain(object):
         self.chain = []
         self.current_transactions = []
 
+        # Create the genesis block (a.k.a block 0)
+        # Almost always hardcoded into the block chain
+        self.new_block(previous_hash=1, proof=100)
+
     def new_block(self, proof, previous_hash=None):
         """
         Create a new Block in the Blockchain
