@@ -10,7 +10,21 @@ Just a code from the tutorial: [Learn Blockchains by Building One](https://hacke
 
 ## Running Application
 
-In order to start the app, run: `pipenv run python api.py`
+- In order to start the app, run: `pipenv run python api.py`
+- If everything is working fine, you should have a server listening on `5000` port
+
+## API Endpoints
+
+Examples provided by calling API using previously mentioned **HTTPie** tool
+
+### Mine a Block
+`http GET :5000/mine`
+
+### Creating New Transaction
+`http POST :5000/transactions/new sender="someone_rich" recipient="happy_receiver" amount=5`
+
+### View the Chain
+`http GET :5000/chain`
 
 
 
