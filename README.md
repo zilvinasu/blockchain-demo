@@ -5,6 +5,11 @@ Just a code from the tutorial: [Learn Blockchains by Building One](https://hacke
 ## Prerequisites
 - Python 3.6+
 - [pipenv](https://docs.pipenv.org/)
+- Install dependencies by running: `pipenv install`
 
-In order to install dependencies, run: `pipenv install`
+## Running Application
+
+In order to start the app, run: `pipenv run python api.py`
+
+
 
