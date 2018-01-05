@@ -10,7 +10,7 @@ Just a code from the tutorial: [Learn Blockchains by Building One](https://hacke
 
 ## Running Application
 
-- In order to start the app, run: `pipenv run python api.py`
+- In order to start the app, run: `pipenv run python api.py --port 5000`
 - If everything is working fine, you should have a server listening on `5000` port
 
 ## API Endpoints
