@@ -26,5 +26,7 @@ Examples provided by calling API using previously mentioned **HTTPie** tool
 ### View the Chain
 `http GET :5000/chain`
 
+### Register Nodes
+`echo '{"nodes": ["http://127.0.0.1:5001"]}' | http POST :5000/nodes/register`
 
 
