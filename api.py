@@ -1,6 +1,6 @@
+import argparse
 from uuid import uuid4
 from flask import Flask, jsonify, request
-
 from blockchain import Blockchain
 
 # Instantiate our Node
@@ -108,5 +108,10 @@ def consensus():
     return jsonify(response), 200
 
 
+# Configure command line arguments
+parser = argparse.ArgumentParser()
+parser.add_argument('--port', '-p', help="specify port for the api server", type=int, default=5000)
+
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    args = parser.parse_args()
+    app.run(host='0.0.0.0', port=args.port)
