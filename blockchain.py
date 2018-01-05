@@ -147,7 +147,6 @@ class Blockchain(object):
 
         return False
 
-
     @property
     def last_block(self):
         return self.chain[-1]
