@@ -29,4 +29,7 @@ Examples provided by calling API using previously mentioned **HTTPie** tool
 ### Register Nodes
 `echo '{"nodes": ["http://127.0.0.1:5001"]}' | http POST :5000/nodes/register`
 
+### Resolve Neighbouring Node Chains
+`http :5000/nodes/resolve`
+
 
